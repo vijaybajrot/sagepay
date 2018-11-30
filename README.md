@@ -43,3 +43,6 @@ $paymentArray = $sagePay->processPayment();
 
 return view('payment',compact('paymentArray'));
 ```
+
+## Check View Part
+[payment.blade.php](./payment.blade.php)
