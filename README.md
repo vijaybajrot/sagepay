@@ -20,6 +20,8 @@ App\Providers\SagePayServiceProvider::class,
 use SagePay,
 ```
 
+#### Update Config in config/sage.php
+
 ## Code
 
 ```php
@@ -33,7 +35,7 @@ $sagePay->addBasketItems(array(
     'amount' => "10"
 ));
 
-/* If any config require, config will be store in config/sage.php */
+/* Overwrite config */
 $sagePay->setConfig("formSuccessUrl",'application/successUrl');
 $sagePay->setConfig("formFailureUrl",'application/successUrl');
 
