@@ -17,8 +17,8 @@ use SagePay,
 
 ```php
 $sagePay = SagePay::create(array(
-	'fullUrl' => url('/application/fullUrl'),
-	'currency' => "GBP",
+    'fullUrl' => url('/application/fullUrl'),
+    'currency' => "GBP",
 ));
 $sagePay->addBasketItems(array(
     "title" => "Product First",
