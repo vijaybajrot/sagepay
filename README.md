@@ -1,21 +1,29 @@
 # SagePay
 Laravel 5 - Sage Pay Integration
 
-### Development in Under Way
+## Usage
 
-## Example
+### Add service provider
+```php
+App\Providers\SagePayServiceProvider::class,
+```
+
+### Use Facade
+```php
+use SagePay,
+```
+
+## Code
 
 ```php
 $sagePay = SagePay::create(array(
-   'fullUrl' => url('/application/fullUrl'),
-   'currency' => "GBP",
+	'fullUrl' => url('/application/fullUrl'),
+	'currency' => "GBP",
 ));
-
 $sagePay->addBasketItems(array(
     "title" => "Product First",
     'amount' => "10"
 ));
-
 /* If any config require, config will be store in config/sage.php */
 $sagePay->setConfig("formSuccessUrl",'application/successUrl');
 $sagePay->setConfig("formFailureUrl",'application/successUrl');
@@ -32,4 +40,6 @@ $sagePay->billing(array(
     "phone" => "Phone no.", //optional
 ));
 $paymentArray = $sagePay->processPayment();
+
+return view('payment',compact('paymentArray'));
 ```
