@@ -48,7 +48,7 @@ $sagePay->billing(array(
 ));
 $paymentArray = $sagePay->processPayment();
 
-return view('payment',compact('paymentArray'));
+return view('payment',$paymentArray);
 ```
 
 ## Check View Part
