@@ -7,13 +7,15 @@ Laravel 5 - Sage Pay Integration
 
 ```php
 $sagePay = SagePay::create(array(
-	'fullUrl' => url('/application/fullUrl'),
-	'currency' => "GBP",
+   'fullUrl' => url('/application/fullUrl'),
+   'currency' => "GBP",
 ));
+
 $sagePay->addBasketItems(array(
     "title" => "Product First",
     'amount' => "10"
 ));
+
 /* If any config require, config will be store in config/sage.php */
 $sagePay->setConfig("formSuccessUrl",'application/successUrl');
 $sagePay->setConfig("formFailureUrl",'application/successUrl');
