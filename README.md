@@ -1,6 +1,13 @@
 # SagePay
 Laravel 5 - Sage Pay Integration
 
+### Installation
+Use Git Clone .
+```
+git clone https://github.com/vijaybajrot/sagepay
+```
+
+
 ## Usage
 
 ### Add service provider
