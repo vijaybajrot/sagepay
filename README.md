@@ -53,3 +53,12 @@ return view('payment',$paymentArray);
 
 ## Check View Part
 [payment.blade.php](./payment.blade.php)
+
+### Add autoload settings in **composer.json**, if you are facing problem with namespaces.
+```json
+"psr-4": {
+    "App\\": "app/",
+    "Tests\\": "tests/",
+    "Services\\": "services/"
+},
+```
